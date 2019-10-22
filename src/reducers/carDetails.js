@@ -37,7 +37,7 @@ export function reducer(state = initialState, action) {
           price: state.car.price - action.payload.price,
           features: state.car.features.filter(item => item.id === action.payload.id ? !item : item)
         },
-        additionalFeatures: [...state.store, action.payload]
+        additionalFeatures: [...state.additionalFeatures, action.payload]
       }
 
     default:
